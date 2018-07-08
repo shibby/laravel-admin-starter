@@ -1,3 +1,15 @@
+# Laravel Admin Starter
+
+![https://i.imgur.com/WDbrxHa.png](https://i.imgur.com/WDbrxHa.png)
+
 ## Installation
 
-    composer create-project shibby/laravel-admin-starter:dev-master shibby/laravel-admin-starter
+Clone repository
+
+    git clone https://github.com/shibby/laravel-admin-starter.git
+
+Install dependencies
+
+    composer install
+    
+    cd public && bower install
