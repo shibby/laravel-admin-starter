@@ -1,0 +1,25 @@
+before_script:
+  - mv /root/composer.phar .
+  - php -v
+  - git --version
+  - ls -lah
+  #- cp public/mix-manifest.json.example public/mix-manifest.json
+  - php composer.phar self-update
+  - php composer.phar install --no-interaction --prefer-dist --optimize-autoloader
+  - cp .env.gitlab .env
+  - php artisan key:generate
+  - php artisan config:cache
+  - php artisan migrate --force
+  - php artisan db:seed
+
+variables:
+  MYSQL_DATABASE: laravel
+  MYSQL_ROOT_PASSWORD: secret
+
+phpunit:php-laravel-env:mysql5.7:
+  image: woohuiren/php-laravel-env:latest
+  services:
+    - mysql:5.7
+  script:
+    - php vendor/bin/phpunit --coverage-text --colors=never
+    #- php vendor/bin/php-cs-fixer fix app --rules=@Symfony --dry-run

@@ -1,0 +1,32 @@
+{
+  "name": "admin-boilerplate",
+  "authors": [
+    "shibby <guvenatbakan@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "**/*.php",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src"
+  ],
+  "dependencies": {
+    "gentelella": "^1.4.0",
+    "elfinder": "^2.1.24",
+    "summernote": "^0.8.3",
+    "select2": "^4.0.3",
+    "select2-bootstrap-theme": "^0.1.0-beta.10",
+    "jquery-ui": "^1.12.1",
+    "jquery-colorbox": "^1.6.4",
+    "summernote-ext-elfinder": "semplon/summernote-ext-elfinder",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.45",
+    "summernote-cleaner": "https://github.com/StudioJunkyard/summernote-cleaner.git",
+    "bootstrap-multiselect": "^0.9.13"
+  }
+}

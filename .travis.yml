@@ -1,0 +1,45 @@
+language: php
+
+addons:
+  hosts:
+    - redis
+
+git:
+  submodules: false
+
+php:
+#  - '7.0'
+  - '7.1'
+
+services:
+  - mysql
+  - redis-server
+
+
+cache:
+  directories:
+    - $HOME/.composer
+
+before_script:
+
+before_script:
+  # Remove xdebug for performance issues
+  - phpenv config-rm xdebug.ini
+  # Required packages
+  - INI_FILE=~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini;
+  - echo extension = redis.so >> $INI_FILE;
+  - echo 'date.timezone = "Europe/Istanbul"' >> $INI_FILE;
+  # Database
+  - mysql -e 'create database IF NOT EXISTS homestead' -uroot
+
+  - cp .env.travis .env
+  - composer self-update
+  - composer install --no-interaction
+#  - yarn
+#  - yarn prod
+  - php artisan key:generate
+  - php artisan migrate --seed --force
+  - php artisan fake:manifest
+
+script:
+  - vendor/bin/phpunit --coverage-text
