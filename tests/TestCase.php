@@ -13,7 +13,7 @@ abstract class TestCase extends BaseTestCase
 
     public function login($typeOrEmail = 'admin')
     {
-        if ($typeOrEmail === 'admin') {
+        if ('admin' === $typeOrEmail) {
             $typeOrEmail = 'admin@admin.com';
         }
 

@@ -220,6 +220,7 @@ class UserService
     public function updateUserProfileView(User $user, $shouldUpdate)
     {
         $sessionKey = 'visited_users__';
+
         try {
             $visitedUsers = \GuzzleHttp\json_decode(session($sessionKey), true);
         } catch (\InvalidArgumentException $exception) {

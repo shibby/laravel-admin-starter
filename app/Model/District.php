@@ -17,6 +17,7 @@ class District extends Model
     }
 
     public $timestamps = false;
+
     protected $casts = [
         'city_id' => 'integer',
     ];

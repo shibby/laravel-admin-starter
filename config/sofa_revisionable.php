@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | User model (for executor relation on Revision model).
@@ -27,7 +26,6 @@ return [
     */
     'userprovider' => 'illuminate',
 
-
     /*
     |--------------------------------------------------------------------------
     | User field to be saved as the author of tracked action.
@@ -40,7 +38,6 @@ return [
     */
     'userfield' => 'id',
 
-
     /*
     |--------------------------------------------------------------------------
     | Table used for the revisions.
@@ -48,12 +45,10 @@ return [
     */
     'table' => 'revisions',
 
-
     /*
     |--------------------------------------------------------------------------
     | Database connection used for the revisions.
     |--------------------------------------------------------------------------
     */
     'connection' => null,
-
 ];

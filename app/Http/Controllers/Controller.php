@@ -10,6 +10,7 @@ use Shibby\Loilerplate\Controller\BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
     protected $parameters = [
         'siteTitle' => 'Admin',
         'siteDescription' => 'Admin',

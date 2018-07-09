@@ -14,5 +14,6 @@ class UserLogin extends Model
     const UPDATED_AT = null;
 
     const ACTION_REGISTER = 'register';
+
     const ACTION_LOGIN = 'login';
 }

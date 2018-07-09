@@ -12,16 +12,21 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     protected $table = 'users';
+
     public $incrementing = false;
 
     use UuidTrait,Notifiable;
 
     public const STATUS_ACTIVE = 5;
+
     public const STATUS_WAITING_APPROVE = 1;
+
     public const STATUS_BANNED = -1;
 
     public const ROLE_ADMIN = 5;
+
     public const ROLE_EDITOR = 3;
+
     public const ROLE_USER = 1;
 
     public const ROLES = [

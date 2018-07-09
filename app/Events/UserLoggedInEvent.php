@@ -9,14 +9,17 @@ use Illuminate\Foundation\Events\Dispatchable;
 class UserLoggedInEvent
 {
     use Dispatchable, SerializesModels;
+
     /**
      * @var User
      */
     private $user;
+
     /**
      * @var string
      */
     private $ipAddress;
+
     /**
      * @var string
      */
