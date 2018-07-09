@@ -9,12 +9,11 @@ git:
 
 php:
 #  - '7.0'
-  - '7.1'
+  - '7.2'
 
 services:
   - mysql
   - redis-server
-
 
 cache:
   directories:
@@ -39,7 +38,7 @@ before_script:
 #  - yarn prod
   - php artisan key:generate
   - php artisan migrate --seed --force
-  - php artisan fake:manifest
+#  - php artisan fake:manifest
 
 script:
   - vendor/bin/phpunit --coverage-text
