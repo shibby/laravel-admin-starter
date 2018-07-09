@@ -1,5 +1,8 @@
 # Laravel Admin Starter
 
+![StyleCi](https://styleci.io/repos/140170252/shield?style=plastic)
+
+
 ![https://i.imgur.com/WDbrxHa.png](https://i.imgur.com/WDbrxHa.png)
 
 ## Installation
