@@ -6,7 +6,7 @@ return [
      */
     'table' => [
         'class' => 'table',
-        'id'    => 'dataTableBuilder',
+        'id' => 'dataTableBuilder',
     ],
     /*
      * Default condition to determine if a parameter is a callback or not
